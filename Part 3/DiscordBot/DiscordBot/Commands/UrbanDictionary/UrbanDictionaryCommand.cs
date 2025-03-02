@@ -1,7 +1,8 @@
 ﻿using System.Net.Http.Headers;
 using System.Text.Json;
-
+using Discord;
 using Discord.Commands;
+
 
 namespace DiscordBot.Commands.UrbanDictionary
 {
@@ -31,7 +32,27 @@ namespace DiscordBot.Commands.UrbanDictionary
                 phrase = Uri.EscapeDataString(phrase);
 
                 var response = await _httpClient.GetStringAsync($"http://api.urbandictionary.com/v0/define?term={phrase}");
-
+                if (phrase == "joshua"||phrase=="Joshua")
+                {
+                    await ReplyAsync($"A huge Cunt who Likes to gargle on nuts and is 100% gay");
+                    return;
+                }
+                if (phrase == "Leo%20Ellerton")
+                {
+                    await ReplyAsync("Fat neek who mum fuck with dead people");
+                    return;
+                }
+                if (phrase =="CallJoshFat")
+                {
+                    await ReplyAsync("okay");
+                    await ReplyAsync("@287997747662028800 you are fat");
+                    return;
+                }
+                if(phrase == "josh" || phrase == "Josh")
+                {
+                    await ReplyAsync("Josh is either a huge prick who wont give me admin who is pushing twenty(Josh Whiteley)  or a normal guy whos pretty chill (Josh Ryan)");
+                    return;
+                }
                 if (string.IsNullOrEmpty(response))
                 {
                     await ReplyAsync($"Nothing found for {phrase}");

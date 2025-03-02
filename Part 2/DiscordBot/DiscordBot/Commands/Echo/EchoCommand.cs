@@ -4,7 +4,7 @@ namespace DiscordBot.Commands.EchoCommand
 {
     public class EchoCommand : ModuleBase<SocketCommandContext>
     {
-        [Command("echo")]
+        [Command("echo")]//!echo hello
         [Summary("Echoes back what was said")]
         public async Task ExecuteAsync([Remainder][Summary("A phrase")] string phrase)
         {
