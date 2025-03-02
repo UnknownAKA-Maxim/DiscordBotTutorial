@@ -34,7 +34,7 @@ namespace DiscordBot.Commands.UrbanDictionary
                 var response = await _httpClient.GetStringAsync($"http://api.urbandictionary.com/v0/define?term={phrase}");
                 if (phrase == "joshua"||phrase=="Joshua")
                 {
-                    await ReplyAsync($"A huge Cunt who Likes to gargle on nuts and is 100% gay");
+                    await ReplyAsync($"A guy who Likes to gargle on nuts");
                     return;
                 }
                 if (phrase == "Leo%20Ellerton")
